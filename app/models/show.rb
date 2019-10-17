@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
   belongs_to :network
   
   def actors_list
-    name = self.actors.map {|t| t.first_name} 
+    name = self.actors.map {|t| t.first_name + t.last_name} 
     binding.pry 
   end 
 end
