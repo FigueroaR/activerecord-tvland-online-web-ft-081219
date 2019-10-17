@@ -7,6 +7,7 @@ class Show < ActiveRecord::Base
   def actors_list
     name = self.actors.map {|t| t.first_name + " " + t.last_name}
     name.join(", ")
+    name
     #binding.pry 
   end 
 end
